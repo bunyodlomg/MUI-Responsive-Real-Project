@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
     FavoriteBorder,
     Favorite,
@@ -18,9 +19,10 @@ import {
     Collapse,
     IconButton,
     Typography,
-} from "@mui/material";
-import React, { useState } from "react";
-
+} from "@mui/material"
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+AOS.init()
 function Post({ title, imgUrl, desc, date, name, subtitle }) {
     const ExpandMore = styled((props) => {
         const { expand, ...other } = props;
@@ -38,13 +40,12 @@ function Post({ title, imgUrl, desc, date, name, subtitle }) {
         setExpanded(!expanded);
     };
     return (
-        <Box flex={4} sx={{marginLeft:"auto", marginRight:"auto"}}>
+        <Box flex={4} sx={{ marginLeft: "auto", marginRight: "auto" }}>
             <Card sx={{
                 maxWidth: '100%',
-                width: {lg: '70%', md: '70%',sm: '70%'},
-                marginLeft:"auto", marginRight:"auto",
-                // padding: { xs: 0, sm: 2, md: 5 },
-            }}>
+                width: { lg: '70%', md: '70%', sm: '70%' },
+                marginLeft: "auto", marginRight: "auto",
+            }} data-aos="zoom-in">
                 <CardHeader
                     avatar={
                         <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
