@@ -6,7 +6,9 @@ const Loader = () => {
         <Box
             sx={{
                 display: 'flex',
-                mb: 5
+                my: 10,
+                ml: "1px",
+                alignItems: 'center'
             }}>
             <CircularProgress />
         </Box>
