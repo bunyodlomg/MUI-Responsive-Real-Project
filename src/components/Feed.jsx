@@ -27,7 +27,7 @@ const Feed = () => {
       document.documentElement.scrollHeight
     ) {
       setLoader(true);
-      setInterval(setPage((prev) => prev + 2), 2000)
+      setInterval(setPage((prev) => prev + 4), 2000)
     }
   }
   // Lazily load  //
